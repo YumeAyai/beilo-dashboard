@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "include": [
+    "src/pages/Dataplane.tsx",
+    "src/pages/Dataplane.test.tsx",
+    "src/components/Dataplane/**/*",
+    "src/hooks/useDataplaneResource.ts",
+    "src/hooks/useDataplaneResource.test.tsx",
+    "src/services/dataplane.ts",
+    "src/services/dataplane.test.ts",
+    "src/types/dataplane.ts",
+    "src/i18n/dataplane.ts"
+  ]
+}

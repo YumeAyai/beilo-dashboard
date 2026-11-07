@@ -1,0 +1,486 @@
+{
+  "version": 1,
+  "crs_version": "4.14.0",
+  "categories": [
+    {
+      "id": "sql_injection",
+      "tags": [
+        "attack-sqli"
+      ],
+      "tag_aliases": [
+        "OWASP_CRS/WEB_ATTACK/SQL_INJECTION"
+      ],
+      "rule_prefixes": [
+        "942"
+      ],
+      "aliases": [
+        "sqli"
+      ],
+      "label_key": "attackType.sqlInjection",
+      "color_key": "sqlInjection",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "xss",
+      "tags": [
+        "attack-xss"
+      ],
+      "tag_aliases": [
+        "OWASP_CRS/WEB_ATTACK/XSS"
+      ],
+      "rule_prefixes": [
+        "941"
+      ],
+      "aliases": [],
+      "label_key": "attackType.xss",
+      "color_key": "xss",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "command_injection",
+      "tags": [
+        "attack-rce"
+      ],
+      "tag_aliases": [
+        "OWASP_CRS/WEB_ATTACK/COMMAND_INJECTION"
+      ],
+      "rule_prefixes": [
+        "932"
+      ],
+      "aliases": [
+        "rce"
+      ],
+      "label_key": "attackType.commandInjection",
+      "color_key": "commandInjection",
+      "priority": 30,
+      "context_only": false
+    },
+    {
+      "id": "lfi",
+      "tags": [
+        "attack-lfi"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "930"
+      ],
+      "aliases": [
+        "path_traversal"
+      ],
+      "label_key": "attackType.pathTraversal",
+      "color_key": "pathTraversal",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "rfi",
+      "tags": [
+        "attack-rfi"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "931"
+      ],
+      "aliases": [
+        "file_include",
+        "file_inclusion"
+      ],
+      "label_key": "attackType.fileInclusion",
+      "color_key": "pathTraversal",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "scanner",
+      "tags": [
+        "attack-reputation-scanner"
+      ],
+      "tag_aliases": [
+        "attack-scanner"
+      ],
+      "rule_prefixes": [
+        "913"
+      ],
+      "aliases": [],
+      "label_key": "attackType.scanner",
+      "color_key": "scanner",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "protocol_attack",
+      "tags": [
+        "attack-protocol"
+      ],
+      "tag_aliases": [
+        "protocol-attack",
+        "PROTOCOL-ATTACK"
+      ],
+      "rule_prefixes": [
+        "920",
+        "921"
+      ],
+      "aliases": [
+        "protocol_violation"
+      ],
+      "label_key": "attackType.protocolAttack",
+      "color_key": "scanner",
+      "priority": 80,
+      "context_only": false
+    },
+    {
+      "id": "multipart_attack",
+      "tags": [
+        "attack-multipart-header"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "922"
+      ],
+      "aliases": [],
+      "label_key": "attackType.multipartAttack",
+      "color_key": "scanner",
+      "priority": 50,
+      "context_only": false
+    },
+    {
+      "id": "deprecated_header",
+      "tags": [
+        "attack-deprecated-header"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.deprecatedHeader",
+      "color_key": "scanner",
+      "priority": 55,
+      "context_only": false
+    },
+    {
+      "id": "generic_attack",
+      "tags": [
+        "attack-generic"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [
+        "other"
+      ],
+      "label_key": "attackType.genericAttack",
+      "color_key": "unknown",
+      "priority": 90,
+      "context_only": false
+    },
+    {
+      "id": "generic_injection",
+      "tags": [
+        "attack-injection-generic"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "934"
+      ],
+      "aliases": [],
+      "label_key": "attackType.genericInjection",
+      "color_key": "commandInjection",
+      "priority": 60,
+      "context_only": false
+    },
+    {
+      "id": "php_injection",
+      "tags": [
+        "attack-injection-php"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "933"
+      ],
+      "aliases": [],
+      "label_key": "attackType.phpInjection",
+      "color_key": "commandInjection",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "java_injection",
+      "tags": [
+        "attack-injection-java"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "944"
+      ],
+      "aliases": [],
+      "label_key": "attackType.javaInjection",
+      "color_key": "commandInjection",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "ssrf",
+      "tags": [
+        "attack-ssrf"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.ssrf",
+      "color_key": "ssrf",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "session_fixation",
+      "tags": [
+        "attack-fixation"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "943"
+      ],
+      "aliases": [],
+      "label_key": "attackType.sessionFixation",
+      "color_key": "csrf",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "data_leak",
+      "tags": [
+        "attack-disclosure"
+      ],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "950"
+      ],
+      "aliases": [
+        "data_disclosure"
+      ],
+      "label_key": "attackType.dataLeak",
+      "color_key": "sensitiveData",
+      "priority": 65,
+      "context_only": false
+    },
+    {
+      "id": "method_enforcement",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "911"
+      ],
+      "aliases": [],
+      "label_key": "attackType.methodEnforcement",
+      "color_key": "scanner",
+      "priority": 75,
+      "context_only": false
+    },
+    {
+      "id": "sql_data_leak",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "951"
+      ],
+      "aliases": [],
+      "label_key": "attackType.sqlDataLeak",
+      "color_key": "sensitiveData",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "java_data_leak",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "952"
+      ],
+      "aliases": [],
+      "label_key": "attackType.javaDataLeak",
+      "color_key": "sensitiveData",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "php_data_leak",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "953"
+      ],
+      "aliases": [],
+      "label_key": "attackType.phpDataLeak",
+      "color_key": "sensitiveData",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "iis_data_leak",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "954"
+      ],
+      "aliases": [],
+      "label_key": "attackType.iisDataLeak",
+      "color_key": "sensitiveData",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "web_shell",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "955"
+      ],
+      "aliases": [],
+      "label_key": "attackType.webShell",
+      "color_key": "commandInjection",
+      "priority": 20,
+      "context_only": false
+    },
+    {
+      "id": "anomaly",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "949",
+        "959"
+      ],
+      "aliases": [
+        "anomaly_threshold"
+      ],
+      "label_key": "attackType.anomaly",
+      "color_key": "unknown",
+      "priority": 1000,
+      "context_only": true
+    },
+    {
+      "id": "correlation",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [
+        "980"
+      ],
+      "aliases": [
+        "rule_correlation"
+      ],
+      "label_key": "attackType.correlation",
+      "color_key": "unknown",
+      "priority": 1100,
+      "context_only": true
+    },
+    {
+      "id": "brute_force",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.bruteForce",
+      "color_key": "bruteForce",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "bot",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.maliciousBot",
+      "color_key": "bot",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "sensitive_data",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.sensitiveData",
+      "color_key": "sensitiveData",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "csrf",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.csrf",
+      "color_key": "csrf",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "xml_injection",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.xmlInjection",
+      "color_key": "xmlInjection",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "ldap_injection",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.ldapInjection",
+      "color_key": "ldapInjection",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "nosql_injection",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.nosqlInjection",
+      "color_key": "nosqlInjection",
+      "priority": 40,
+      "context_only": false
+    },
+    {
+      "id": "rule_block",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.ruleBlock",
+      "color_key": "unknown",
+      "priority": 900,
+      "context_only": false
+    },
+    {
+      "id": "rule_alert",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.ruleAlert",
+      "color_key": "unknown",
+      "priority": 900,
+      "context_only": false
+    },
+    {
+      "id": "unknown",
+      "tags": [],
+      "tag_aliases": [],
+      "rule_prefixes": [],
+      "aliases": [],
+      "label_key": "attackType.unknown",
+      "color_key": "unknown",
+      "priority": 9999,
+      "context_only": false
+    }
+  ]
+}

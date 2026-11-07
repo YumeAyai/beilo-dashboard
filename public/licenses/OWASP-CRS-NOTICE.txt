@@ -1,0 +1,12 @@
+OWASP Core Rule Set 4.14.0 source-reference catalog
+Extracted from coraza-proxy-wasm/wasmplugin/rules/crs.
+
+Copyright (c) 2006-2020 Trustwave and contributors. All rights reserved.
+Copyright (c) 2021-2025 CRS project. All rights reserved.
+
+The OWASP CRS is distributed under the Apache License, Version 2.0.
+See OWASP-CRS-Apache-2.0.txt for the license.
+
+The catalog omits comments and external data-file contents and groups chained
+conditions under their rule ID for browsing. Original directives are retained.
+It is a source reference, not an inventory of active Envoy configuration.

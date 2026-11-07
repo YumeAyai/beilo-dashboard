@@ -1,0 +1,882 @@
+{
+  "observability": {
+    "fields": {
+      "unblockedThreats": "未遮断の脅威"
+    }
+  },
+  "common": {
+    "back": "戻る",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "delete": "削除",
+    "edit": "編集",
+    "add": "追加",
+    "search": "検索",
+    "refresh": "更新",
+    "export": "エクスポート",
+    "import": "インポート",
+    "apply": "適用",
+    "reset": "リセット",
+    "close": "閉じる",
+    "yes": "はい",
+    "no": "いいえ",
+    "loading": "読み込み中...",
+    "noData": "データなし",
+    "success": "成功",
+    "error": "エラー",
+    "warning": "警告",
+    "info": "情報",
+    "enabled": "有効",
+    "disabled": "無効",
+    "active": "アクティブ",
+    "inactive": "非アクティブ",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "all": "すべて",
+    "total": "合計",
+    "actions": "操作",
+    "status": "ステータス",
+    "time": "時間",
+    "type": "タイプ",
+    "level": "レベル",
+    "name": "名前",
+    "description": "説明",
+    "category": "カテゴリ",
+    "ip": "IP",
+    "url": "URL",
+    "source": "ソース",
+    "count": "回数",
+    "day": "日",
+    "hour": "時間",
+    "minute": "分",
+    "justNow": "たった今",
+    "daysAgo": "{{count}}日前",
+    "hoursAgo": "{{count}}時間前",
+    "minutesAgo": "{{count}}分前"
+  },
+  "status": {
+    "suspicious": "疑わしい",
+    "detected": "検知済み・未遮断",
+    "logged": "記録済み",
+    "allowed": "許可済み",
+    "unknown": "状態不明",
+    "enabled": "有効",
+    "disabled": "無効",
+    "blocked": "ブロック済み",
+    "processing": "処理中",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "active": "アクティブ",
+    "inactive": "非アクティブ",
+    "success": "成功",
+    "error": "エラー",
+    "warning": "警告",
+    "banned": "禁止",
+    "monitoring": "監視中",
+    "pending": "保留中"
+  },
+  "threatLevel": {
+    "critical": "重大",
+    "high": "高",
+    "medium": "中",
+    "low": "低",
+    "info": "情報",
+    "unknown": "未報告"
+  },
+  "attackType": {
+    "ruleAlert": "ルール警告",
+    "protocolAttack": "プロトコル異常",
+    "ruleBlock": "ルールによるブロック",
+    "sqlInjection": "SQLインジェクション",
+    "xss": "XSS攻撃",
+    "commandInjection": "コマンドインジェクション",
+    "pathTraversal": "パス巡回",
+    "fileInclusion": "ファイルインクルージョン",
+    "bruteForce": "ブルートフォース",
+    "scanner": "スキャナー",
+    "maliciousBot": "悪意のあるボット",
+    "sensitiveData": "機密データ",
+    "csrf": "CSRF攻撃",
+    "ssrf": "SSRF攻撃",
+    "xmlInjection": "XMLインジェクション",
+    "ldapInjection": "LDAPインジェクション",
+    "nosqlInjection": "NoSQLインジェクション",
+    "unknown": "不明な脅威",
+    "multipartAttack": "Multipart 異常",
+    "deprecatedHeader": "非推奨リクエストヘッダー",
+    "genericAttack": "汎用ルール警告",
+    "genericInjection": "汎用インジェクション",
+    "phpInjection": "PHP インジェクション",
+    "javaInjection": "Java インジェクション",
+    "sessionFixation": "セッション固定",
+    "dataLeak": "情報漏えい",
+    "methodEnforcement": "HTTP メソッド制限",
+    "sqlDataLeak": "SQL 情報漏えい",
+    "javaDataLeak": "Java 情報漏えい",
+    "phpDataLeak": "PHP 情報漏えい",
+    "iisDataLeak": "IIS 情報漏えい",
+    "webShell": "Web シェルの兆候",
+    "anomaly": "異常スコア判定",
+    "correlation": "トランザクション相関"
+  },
+  "ruleAction": {
+    "block": "ブロック",
+    "allow": "許可",
+    "skip": "スキップ",
+    "log": "ログ",
+    "redirect": "リダイレクト",
+    "drop": "ドロップ",
+    "returnStatus": "ステータス返す"
+  },
+  "nodeType": {
+    "entry": "エントリ",
+    "exit": "出口",
+    "internal": "内部",
+    "external": "外部"
+  },
+  "layout": {
+    "title": "北落コンソール",
+    "connected": "接続済み",
+    "disconnected": "未接続",
+    "nav": {
+      "dashboard": "ダッシュボード",
+      "topology": "サービストポロジー",
+      "threat": "脅威監視",
+      "rules": "WAFルール",
+      "logs": "ログビューア",
+      "block": "IP禁止",
+      "users": "ユーザー管理",
+      "settings": "システム設定"
+    },
+    "toolbar": {
+      "refresh": "更新",
+      "theme": "テーマ切替",
+      "notification": "通知",
+      "settings": "設定"
+    },
+    "notification": {
+      "title": "通知センター",
+      "markAllRead": "すべて既読",
+      "clearAll": "クリア",
+      "empty": "通知なし"
+    },
+    "user": {
+      "admin": "Admin",
+      "role": "管理者",
+      "menu": {
+        "settings": "システム設定",
+        "logout": "ログアウト"
+      }
+    }
+  },
+  "dashboard": {
+    "protection": {
+      "title": "防御による遮断",
+      "window": "過去24時間",
+      "waf": "WAF 遮断",
+      "xdp": "XDP 破棄",
+      "cnp": "ポリシー拒否",
+      "requests": "リクエスト",
+      "packets": "パケット",
+      "notCollected": "未収集",
+      "unavailable": "取得不可",
+      "wafHint": "Coraza が遮断した HTTP リクエスト数です。ルール一致数ではなく、パケット数とは合算しません。",
+      "xdpHint": "Beilo XDP のブロックリストまたは不正 TCP フラグ規則による破棄パケット数です。未収集はゼロではありません。",
+      "cnpHint": "CNP、CCNP、Kubernetes の通常の分離を含む Cilium ポリシー拒否パケット数です。確認済み攻撃や Beilo 専用ポリシーの件数ではありません。経路障害などは除外します。",
+      "blockedThreats": "遮断済みの脅威",
+      "intercepted": "遮断済み",
+      "blockedThreatsHint": "WAF と XDP セキュリティルールの遮断動作を合計します。HTTP 遮断またはパケット破棄をそれぞれ1回と数え、重複排除された攻撃数ではありません。ポリシー拒否は含みません。",
+      "interceptedHint": "WAF、XDP、ネットワークポリシーの遮断動作を合計します。HTTP 遮断またはパケット破棄をそれぞれ1回と数えます。通常の CNP、CCNP、Kubernetes 分離拒否を含み、確認済み攻撃ではありません。経路障害は除外します。",
+      "partialHint": "取得済みのソースのみを合計します。未収集または取得できないソースは含みません。",
+      "runtimeBlocked": "侵入ブロック",
+      "wafBlocked": "WAF ブロック",
+      "runtimeBlockedHint": "ランタイムのセキュリティポリシーがブロックした操作数。",
+      "wafBlockedHint": "WAF がブロックした HTTP リクエスト数。",
+      "blockCountUnavailable": "データを取得できません。"
+    },
+    "title": "ダッシュボード",
+    "subtitle": "セキュリティと稼働状況の概要",
+    "stats": {
+      "topology": "サービストポロジー",
+      "totalSites": "Ingressノード",
+      "totalNodes": "Serviceノード",
+      "ingressNodes": "Ingress ノード",
+      "serviceNodes": "Service ノード",
+      "threatBlock": "脅威防御",
+      "directServices": "直接公開 Service",
+      "entryBusinessScale": "入口と業務の規模",
+      "entryResources": "入口リソース",
+      "businessServices": "保護中の Service",
+      "entryBreakdown": "Ingress {{ingress}} · Gateway {{gateway}} · 直接 Service {{service}}",
+      "podBreakdown": "準備完了 Pod {{ready}} / {{total}}",
+      "inventoryUnavailable": "入口の詳細を取得できません",
+      "podsUnavailable": "Pod 情報を取得できません",
+      "entryScaleHint": "Ingress、Gateway、直接公開された Service を表示します。",
+      "businessScaleHint": "WAF 入口に関連する Service と Pod を表示します。",
+      "entryExposure": "入口の公開状況",
+      "ingressEntries": "Ingress 入口",
+      "gatewayEntries": "Gateway 入口",
+      "exposureHint": "公開済みの Ingress と Gateway を表示します。",
+      "threatDetected": "脅威検出",
+      "totalBlocked": "累計ブロック",
+      "clusterStatus": "クラスターの状態",
+      "qps": "QPS",
+      "readyPods": "準備完了 Pod",
+      "notReadyPods": "未準備の Pod",
+      "totalPods": "Pod 総数"
+    },
+    "connection": {
+      "redisEnabled": "Redis有効",
+      "redisDisabled": "Redis無効",
+      "connected": "接続済み",
+      "notConnected": "未接続",
+      "lokiEnabled": "Loki有効",
+      "lokiDisabled": "Loki無効"
+    },
+    "metrics": {
+      "threatRate": "脅威率",
+      "totalRequests": "総リクエスト"
+    },
+    "charts": {
+      "threatTrend": "脅威トレンド",
+      "attackTypeDistribution": "攻撃タイプ分布",
+      "attackSourceRanking": "攻撃元ランキング",
+      "recentAttacks": "最近のアタック",
+      "requestTrend": "リクエストトレンド",
+      "ipSourceStats": "IPソース統計",
+      "clusterHealth": "集群健全性",
+      "qpsChart": "QPS",
+      "clientSource": "クライアントソース",
+      "responseStatus": "レスポンスステータス",
+      "externalSourceDomains": "外部ソースドメイン",
+      "externalSourcePages": "外部ソースページ",
+      "visitedDomains": "訪問ドメイン",
+      "visitedPages": "訪問ページ",
+      "ipHeatmap": "IPリクエストヒートマップ",
+      "requestAttribution": "トラフィック分析"
+    },
+    "table": {
+      "sourceIp": "送信元IP",
+      "region": "地域",
+      "attackCount": "攻撃回数",
+      "threat": "脅威",
+      "time": "時間",
+      "attackIp": "攻撃IP",
+      "attackType": "攻撃タイプ",
+      "site": "サイト",
+      "requests": "リクエスト数",
+      "percentage": "割合"
+    },
+    "chips": {
+      "high": "高",
+      "medium": "中",
+      "low": "低",
+      "top5": "TOP 5"
+    },
+    "clusterStatus": {
+      "healthy": "正常",
+      "degraded": "機能低下",
+      "down": "停止",
+      "unknown": "不明",
+      "latency": "レイテンシ",
+      "uptime": "稼働時間",
+      "apiServer": "API Server",
+      "etcd": "etcd ストレージ",
+      "redis": "Redis キャッシュ",
+      "loki": "Loki",
+      "workerNode": "ワーカーノード"
+    }
+  },
+  "rules": {
+    "title": "WAFルール管理",
+    "subtitle": "Webアプリケーションファイアウォールルールを管理し、アプリケーションを攻撃から保護します",
+    "stats": {
+      "total": "ルール総数",
+      "enabled": "有効",
+      "disabled": "無効",
+      "critical": "重大ルール"
+    },
+    "table": {
+      "name": "ルール名",
+      "category": "カテゴリ",
+      "level": "レベル",
+      "action": "アクション",
+      "type": "タイプ",
+      "status": "ステータス",
+      "matchCount": "マッチ回数",
+      "lastMatch": "最終マッチ",
+      "actions": "操作"
+    },
+    "filter": {
+      "allCategory": "全カテゴリ",
+      "allLevel": "全レベル",
+      "allStatus": "全ステータス",
+      "critical": "重大",
+      "high": "高",
+      "medium": "中",
+      "low": "低",
+      "enabled": "有効",
+      "disabled": "無効"
+    },
+    "buttons": {
+      "apply": "適用",
+      "template": "テンプレート",
+      "export": "エクスポート",
+      "newRule": "新規ルール"
+    },
+    "searchPlaceholder": "ルール名、説明を検索...",
+    "toolbar": {
+      "refresh": "更新",
+      "edit": "編集",
+      "test": "テスト",
+      "delete": "削除"
+    },
+    "batch": {
+      "selected": "<strong>{{count}}</strong> 件のルールを選択",
+      "enable": "有効",
+      "disable": "無効"
+    },
+    "pagination": {
+      "rowsPerPage": "ページあたりの行数",
+      "displayRows": "{{from}}-{{to}} / 合計 {{count}}"
+    },
+    "template": {
+      "title": "ルールテンプレート",
+      "subtitle": "事前に定義されたルールテンプレートを選択して素早くルールを作成",
+      "close": "閉じる"
+    },
+    "export": {
+      "inProgress": "エクスポート機能は開発中です"
+    },
+    "test": {
+      "title": "ルールテスト",
+      "subtitle": "リクエストに対するルールのマッチング効果をテスト",
+      "method": "メソッド",
+      "path": "パス",
+      "headers": "リクエストヘッダー (JSON)",
+      "body": "リクエストボディ",
+      "startTest": "テスト開始",
+      "testing": "テスト中...",
+      "result": {
+        "title": "テスト結果",
+        "matchedResult": "マッチ結果",
+        "matched": "マッチ",
+        "notMatched": "未マッチ",
+        "action": "実行アクション",
+        "processingTime": "処理時間",
+        "matchedRules": "マッチしたルール"
+      }
+    },
+    "ruleType": {
+      "regex": "正規表現",
+      "stringMatch": "文字列マッチ",
+      "variableCompare": "変数比較",
+      "conditionGroup": "条件组合"
+    },
+    "phase": {
+      "early": "早期処理",
+      "request": "リクエストフェーズ",
+      "response": "レスポンスフェーズ"
+    },
+    "action": {
+      "block": "ブロック",
+      "allow": "許可",
+      "pass": "スキップ",
+      "log": "ログ",
+      "redirect": "リダイレクト",
+      "drop": "ドロップ",
+      "status": "ステータス返却"
+    },
+    "editor": {
+      "editTitle": "ルール編集",
+      "createTitle": "新規ルール",
+      "name": "ルール名",
+      "description": "説明",
+      "ruleType": "ルールタイプ",
+      "regex": "正規表現",
+      "stringMatch": "文字列マッチ",
+      "variableCompare": "変数比較",
+      "conditionGroup": "条件グループ",
+      "phase": "処理フェーズ",
+      "earlyPhase": "早期処理",
+      "requestPhase": "リクエストフェーズ",
+      "responsePhase": "レスポンスフェーズ",
+      "threatLevel": "脅威レベル",
+      "conditions": "マッチ条件",
+      "addCondition": "条件追加",
+      "noConditions": "マッチ条件なし"
+    },
+    "condition": {
+      "placeholder": "マッチ値",
+      "addFirst": "最初の条件を追加",
+      "variable": "条件変数",
+      "requestPath": "リクエストパス",
+      "requestBody": "リクエストボディ",
+      "requestHeader": "リクエストヘッダー",
+      "queryParam": "クエリパラメータ",
+      "allParams": "すべてのパラメータ",
+      "clientIp": "クライアントIP",
+      "userAgent": "User-Agent",
+      "cookie": "Cookie",
+      "operator": "条件演算子",
+      "match": "マッチ",
+      "contains": "含む",
+      "equals": "等しい",
+      "startsWith": "始まる",
+      "endsWith": "終わる",
+      "regex": "正規表現"
+    },
+    "messages": {
+      "noRules": "ルールなし",
+      "enabledCount": "{{count}}条のルールを有効化",
+      "enableFailed": "有効化失敗",
+      "disabledCount": "{{count}}条のルールを無効化",
+      "disableFailed": "無効化失敗",
+      "confirmDelete": "このルールを削除してもよろしいですか？",
+      "deleteFailed": "削除失敗",
+      "deleted": "ルール削除済み",
+      "ruleUpdated": "ルール更新済み",
+      "ruleCreated": "ルール作成済み",
+      "saveFailed": "保存失敗",
+      "templateApplied": "テンプレート適用済み",
+      "applyTemplateFailed": "テンプレート適用失敗",
+      "nameRequired": "ルール名は必須です",
+      "conditionRequired": "少なくとも1つのマッチ条件が必要です"
+    },
+    "category": {
+      "placeholder": "例: SQLインジェクション、XSS、コマンドインジェクションなど",
+      "sqlInjection": "SQLインジェクション",
+      "xss": "XSS",
+      "commandInjection": "コマンドインジェクション",
+      "pathTraversal": "パス巡回",
+      "scanner": "スキャナー",
+      "infoLeak": "情報漏洩"
+    }
+  },
+  "threat": {
+    "title": "脅威監視",
+    "subtitle": "セキュリティ脅威をリアルタイムで監視・分析",
+    "autoRefresh": "自動更新",
+    "timeRange": {
+      "15min": "過去15分",
+      "1hour": "過去1時間",
+      "6hours": "過去6時間",
+      "24hours": "過去24時間",
+      "7days": "過去7日間"
+    },
+    "stats": {
+      "totalRequests": "総リクエスト数",
+      "threatDetected": "脅威検出",
+      "unblockedHint": "トランザクション単位で重複を除いた Coraza のルール警告。明確な遮断を除き、≥ はサンプルの下限を示します。",
+      "blocked": "ブロック済み",
+      "blockedIp": "禁止IP"
+    },
+    "charts": {
+      "threatTrend": "脅威トレンド",
+      "threatTypeDistribution": "脅威タイプ分布",
+      "threatLevelDistribution": "脅威レベル分布",
+      "attackSourceRanking": "攻撃元ランキング",
+      "recentThreats": "最近の脅威イベント"
+    },
+    "table": {
+      "ip": "IPアドレス",
+      "threatCount": "脅威数",
+      "requests": "リクエスト数",
+      "blockedCount": "ブロック数",
+      "status": "ステータス",
+      "time": "時間",
+      "sourceIp": "送信元IP",
+      "threatType": "脅威タイプ",
+      "targetUrl": "ターゲットURL",
+      "level": "レベル"
+    },
+    "chartNames": {
+      "threatCount": "脅威数",
+      "blockedCount": "ブロック数"
+    },
+    "fetchFailed": "脅威データの取得に失敗しました"
+  },
+  "topology": {
+    "zoomOut": "縮小",
+    "zoomIn": "拡大",
+    "fitView": "全体を表示",
+    "title": "サービストポロジー",
+    "subtitle": "サービス間の接続関係を表示・管理",
+    "allNamespaces": "すべてのネームスペース",
+    "httpStatus": "HTTPステータス",
+    "filterPlaceholder": "絞り込み：app=web、ip=1.1.1.1、pod=frontend",
+    "filters": {
+      "label": "フローフィルター",
+      "namespace": "ネームスペース",
+      "clear": "フィルターをクリア",
+      "open": "候補を表示",
+      "findNamespace": "ネームスペースを検索…",
+      "noNamespaces": "一致するネームスペースがありません",
+      "noSuggestions": "候補なし。条件を入力できます"
+    },
+    "verdict": {
+      "any": "すべての結果",
+      "forwarded": "転送済み",
+      "dropped": "ドロップ済み",
+      "denied": "拒否済み",
+      "audit": "監査"
+    },
+    "flowsPerSecond": "{{count}} フロー/秒",
+    "nodesConnected": "{{connected}}/{{total}} ノード接続済み",
+    "namespaceResources": "ネームスペースリソース",
+    "allNamespacesText": "すべてのネームスペース",
+    "flows": "フロー",
+    "loadingFlows": "フローを読み込み中…",
+    "flowsCount": "({{count}})",
+    "columns": "列",
+    "toggleColumns": "列の表示切り替え",
+    "noFlows": "フローが見つかりません",
+    "noPods": "Podが見つかりません",
+    "failedToFetch": "トポロジーデータの取得に失敗しました",
+    "overview": "概要",
+    "pods": "Pod",
+    "nodeType": "ノードタイプ",
+    "port": "ポート",
+    "requestRate": "リクエストレート",
+    "errorRate": "エラーレート",
+    "latency": "レイテンシー",
+    "cpuUsage": "CPU使用率",
+    "memoryUsage": "メモリ使用率",
+    "tableColumns": {
+      "sourcePod": "ソース Pod",
+      "sourceIP": "ソース IP",
+      "sourceIdentity": "ソース ID",
+      "sourceService": "ソースサービス",
+      "destinationPod": "宛先 Pod",
+      "destinationIP": "宛先 IP",
+      "destinationIdentity": "宛先 ID",
+      "destinationService": "宛先サービス",
+      "destinationPort": "宛先ポート",
+      "l7info": "L7 情報",
+      "trafficDirection": "トラフィック方向",
+      "verdict": "結果",
+      "authentication": "認証",
+      "tcpFlags": "TCP フラグ",
+      "timestamp": "タイムスタンプ"
+    }
+  },
+  "block": {
+    "title": "IP禁止管理",
+    "subtitle": "悪意のあるアクセスを防ぐため、ブロックされたIPアドレスを管理",
+    "search": "IP検索",
+    "buttons": {
+      "manualBlock": "手動禁止",
+      "refresh": "更新"
+    },
+    "table": {
+      "ip": "IPアドレス",
+      "type": "タイプ",
+      "reason": "理由",
+      "blockTime": "禁止時間",
+      "expireTime": "期限",
+      "source": "ソース",
+      "actions": "操作"
+    },
+    "status": {
+      "blockedList": "禁止IPリスト",
+      "total": "{{count}}件"
+    },
+    "empty": {
+      "noMatch": "該当するIPが見つかりません",
+      "noRecords": "禁止記録なし"
+    },
+    "dialog": {
+      "title": "手動IP禁止",
+      "ip": "IPアドレス",
+      "ipPlaceholder": "例: 1.2.3.4",
+      "reason": "禁止理由",
+      "reasonPlaceholder": "任意、禁止理由を説明してください"
+    },
+    "messages": {
+      "fetchFailed": "禁止リストの取得に失敗しました",
+      "ipRequired": "IPアドレスを入力してください",
+      "ipInvalid": "有効なIPアドレスを入力してください",
+      "blockFailed": "禁止に失敗しました",
+      "unblockFailed": "解除に失敗しました",
+      "blockedSuccess": "IP {{ip}} を禁止しました",
+      "unblockedSuccess": "IP {{ip}} を解除しました"
+    }
+  },
+  "logs": {
+    "title": "ログビューア",
+    "subtitle": "システムログを閲覧・分析し、問題を迅速に特定",
+    "filter": {
+      "timeRange": "時間範囲",
+      "level": "ログレベル",
+      "all": "すべて",
+      "quantity": "数量"
+    },
+    "table": {
+      "time": "時間",
+      "level": "レベル",
+      "message": "メッセージ",
+      "source": "ソース"
+    },
+    "empty": "ログデータなし",
+    "error": "ログの取得に失敗しました",
+    "buttons": {
+      "query": "クエリ",
+      "refresh": "更新",
+      "export": "エクスポート"
+    }
+  },
+  "users": {
+    "title": "ユーザー管理",
+    "subtitle": "システムユーザーと権限を管理",
+    "buttons": {
+      "addUser": "ユーザー追加"
+    },
+    "table": {
+      "user": "ユーザー",
+      "email": "メール",
+      "role": "役割",
+      "status": "ステータス",
+      "joinTime": "参加時間",
+      "actions": "操作"
+    },
+    "roles": {
+      "admin": "管理者",
+      "editor": "編集者",
+      "user": "ユーザー"
+    },
+    "presetUsers": {
+      "zhangSan": "張三",
+      "liSi": "李四",
+      "wangWu": "王五",
+      "zhaoLiu": "趙六",
+      "qianQi": "錢七",
+      "sunBa": "孫八",
+      "zhouJiu": "周三"
+    },
+    "dialog": {
+      "editTitle": "ユーザー編集",
+      "addTitle": "ユーザー追加",
+      "name": "名前",
+      "email": "メール",
+      "role": "役割",
+      "status": "ステータス",
+      "username": "ユーザー名",
+      "newPassword": "新しいパスワード",
+      "password": "パスワード",
+      "roles": "役割"
+    },
+    "validation": {
+      "usernameRequired": "ユーザー名は必須です",
+      "emailRequired": "メールは必須です",
+      "passwordRequired": "パスワードは必須です",
+      "invalidEmail": "有効なメールアドレスを入力してください",
+      "saveFailed": "保存に失敗しました。再試行してください"
+    }
+  },
+  "settings": {
+    "title": "システム設定",
+    "subtitle": "システムパラメータとセキュリティ設定を構成",
+    "tabs": {
+      "general": "一般",
+      "notification": "通知",
+      "security": "セキュリティ",
+      "channels": "通知チャンネル"
+    },
+    "general": {
+      "siteName": "サイト名",
+      "siteUrl": "サイトURL",
+      "contactEmail": "連絡先メール",
+      "timezone": "タイムゾーン",
+      "language": "言語",
+      "locale": "ロケール",
+      "siteInfo": "サイト"
+    },
+    "notification": {
+      "emailNotification": "メール通知",
+      "enableEmail": "メール通知を有効にする",
+      "enablePush": "プッシュ通知を有効にする",
+      "securityReminder": "セキュリティ通知",
+      "securityDescription": "セキュリティイベントの通知を受け取る",
+      "systemUpdate": "システム更新",
+      "weeklyReport": "週次レポート",
+      "pushDescription": "プッシュ通知を受け取る",
+      "systemDescription": "システム更新通知",
+      "reportDescription": "週次サマリーレポート"
+    },
+    "security": {
+      "accountInfo": "アカウント情報",
+      "userEmail": "ユーザーメール",
+      "userId": "ユーザーID",
+      "superAdmin": "スーパー管理者",
+      "changePassword": "パスワード変更",
+      "currentPassword": "現在のパスワード",
+      "newPassword": "新しいパスワード",
+      "confirmPassword": "新しいパスワードの確認",
+      "confirmNewPassword": "新しいパスワードの確認",
+      "passwordError": "パスワード確認エラー",
+      "currentPasswordRequired": "現在のパスワードを入力してください",
+      "newPasswordRequired": "新しいパスワードを入力してください",
+      "passwordMismatch": "新しいパスワードが一致しません",
+      "passwordTooShort": "パスワードは6文字以上である必要があります",
+      "enable2FA": "二要素認証を有効にする",
+      "twoFactorAuth": "二要素認証",
+      "totpEnabled": "2FAが有効です",
+      "totpDisabled": "2FAが無効です",
+      "totpSetupTitle": "二要素認証の設定",
+      "totpSetupStep1": "認証アプリ（Google Authenticatorなど）をダウンロード",
+      "totpSetupStep2": "QRコードをスキャンするか、手動でキーを入力",
+      "totpSetupScanHelp": "認証アプリでQRコードをスキャン",
+      "totpSetupManualHelp": "スキャンできない場合は、このキーを手動入力：",
+      "totpSetupManualKey": "手動キー",
+      "totpSetupEnterCode": "アプリの6桁コードを入力",
+      "totpSetupVerificationCode": "確認コード",
+      "totpSetupEnable": "2FAを有効",
+      "totpSetupSuccessTitle": "2FAが有効になりました",
+      "totpSetupSuccessMessage": "アカウントがセキュリティ強化されました",
+      "loginNotification": "ログイン通知",
+      "loginNotifDesc": "新しいログイン活動の通知を受け取る",
+      "securityOptions": "セキュリティオプション",
+      "role": "役割",
+      "registered": "登録日",
+      "lastLogin": "最終ログイン"
+    },
+    "buttons": {
+      "save": "設定を保存",
+      "confirmPassword": "パスワード変更を確認",
+      "enable2FA": "2FAを有効",
+      "disable2FA": "2FAを無効"
+    },
+    "channels": {
+      "title": "通知チャンネル",
+      "subtitle": "通知チャンネルとルールを管理",
+      "addChannel": "チャンネルを追加",
+      "editChannel": "チャンネルを編集",
+      "name": "名前",
+      "type": "タイプ",
+      "status": "ステータス",
+      "isDefault": "デフォルト",
+      "default": "デフォルト",
+      "noChannels": "通知チャンネルがありません",
+      "setAsDefault": "デフォルトに設定",
+      "active": "有効"
+    },
+    "totp": {
+      "disable": "2FAを無効",
+      "disableMessage": "二要素認証を無効にするには、認証アプリの6桁の確認コードを入力してください。",
+      "verificationCode": "確認コード"
+    }
+  },
+  "login": {
+    "title": "北落コンソール",
+    "subtitle": "アカウントにログイン",
+    "fields": {
+      "username": "ユーザー名",
+      "password": "パスワード",
+      "totpCode": "確認コード"
+    },
+    "buttons": {
+      "login": "ログイン"
+    },
+    "errors": {
+      "required": "ユーザー名とパスワードは必須です",
+      "failed": "ログインに失敗しました。もう一度お試しください。",
+      "invalid": "ユーザー名またはパスワードが正しくありません",
+      "totpRequired": "確認コードが必要です",
+      "totpInvalid": "確認コードが正しくありません"
+    },
+    "totpRequired": "二要素認証が必要です。認証アプリのコードを入力してください。",
+    "footer": {
+      "defaultHint": "セキュリティと可観測性 · 北落"
+    }
+  },
+  "requestAttribution": {
+    "addressTypes": {
+      "private": "プライベートアドレス",
+      "loopback": "ループバック",
+      "link_local": "リンクローカル",
+      "shared": "共有アドレス",
+      "multicast": "マルチキャスト",
+      "unspecified": "未指定アドレス",
+      "reserved": "予約アドレス",
+      "invalid": "無効なアドレス"
+    },
+    "unknownLocation": "位置不明",
+    "unnamedRegion": "名称のない地図領域",
+    "noObservedTraffic": "位置を特定したアクセス記録はありません",
+    "title": "トラフィック概要",
+    "totalRequests": "総リクエスト数",
+    "totalThreats": "総脅威数",
+    "threatRate": "脅威率",
+    "sourceCountries": "ソース国",
+    "country": "国",
+    "requests": "リクエスト",
+    "threatPercent": "脅威%",
+    "rank": "#",
+    "highThreat": "高脅威",
+    "elevated": "中脅威",
+    "normal": "正常"
+  },
+  "emailTemplates": {
+    "title": "メールテンプレート",
+    "description": "通知メールのレイアウトと文面を編集し、保存後にメールチャネルで選択できます。",
+    "choose": "テンプレートを選択",
+    "name": "テンプレート名",
+    "subject": "メール件名",
+    "visual": "ビジュアル編集",
+    "source": "HTML ソース",
+    "text": "プレーンテキスト版",
+    "preview": "メールプレビュー",
+    "previewWidth": "プレビューサイズ",
+    "previewHint": "サンプルデータです。メールは送信されません。",
+    "desktop": "デスクトップ",
+    "mobile": "モバイル",
+    "export": "エクスポート",
+    "save": "テンプレートを保存",
+    "saving": "保存中…",
+    "saved": "保存しました。メールチャネルで選択できます。",
+    "unsaved": "未保存の変更",
+    "stored": "保存済み",
+    "preset": "プリセット・未保存",
+    "restore": "現在のテンプレートを元に戻す",
+    "reload": "再読み込み",
+    "unavailable": "メールテンプレートサービスを利用できません。編集、プレビュー、エクスポートは可能です。",
+    "selectorUnavailable": "テンプレートを読み込めません。「メールテンプレート」タブで確認してください。",
+    "conflict": "他のユーザーが変更しました。下書きは保持しています。再読み込みして保存済み版と比較してください。",
+    "forbidden": "メールテンプレートへのアクセスまたは保存権限がありません。",
+    "failed": "メールテンプレートの操作に失敗しました。",
+    "invalid": "プレビューに失敗しました",
+    "regenerate": "ビジュアル項目を変更すると HTML が再生成され、ソースの変更が置き換わります。",
+    "variables": "イベント項目：Title、Summary、OccurredAt、Fields。",
+    "sourceHint": "項目参照と if、with、range ブロックを使用できます。関数呼び出しには対応していません。",
+    "channelTemplate": "メールテンプレート",
+    "channelHint": "このチャネルで使用するテンプレートを選択します。先にテンプレートを保存してください。",
+    "plainText": "プレーンテキストメール",
+    "sampleTitle": "メールテンプレートのプレビュー",
+    "sampleMessage": "メールのレイアウトと文面を確認するためのサンプル通知です。",
+    "fields": {
+      "heading": "見出しの書式",
+      "summary": "本文の書式",
+      "category": "カテゴリラベル",
+      "badge": "状態ラベル",
+      "color": "強調色",
+      "tint": "背景色",
+      "border": "枠線色",
+      "environment": "環境名",
+      "actionLabel": "ボタンのテキスト",
+      "actionURL": "ボタンの URL（任意）",
+      "reason": "受信理由",
+      "footerNote": "補足",
+      "footerVerse": "フッターの句",
+      "footerTagline": "ブランドの説明"
+    },
+    "scenes": {
+      "security-alert": "セキュリティアラート",
+      "policy-change": "ポリシー変更",
+      "system-warning": "システム警告",
+      "recovery": "復旧通知",
+      "daily-digest": "日次サマリー",
+      "channel-test": "チャネルテスト"
+    }
+  }
+}

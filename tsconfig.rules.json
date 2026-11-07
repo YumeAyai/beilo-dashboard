@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.rules.tsbuildinfo"
+  },
+  "include": [
+    "src/pages/Rules.tsx",
+    "src/components/Rules/CrsRuleCatalog.tsx",
+    "src/components/Rules/CrsCommunityUpdates.tsx",
+    "src/components/Rules/RulesManagement.test.tsx",
+    "src/components/Rules/CrsBuildWorkflow.test.tsx",
+    "src/hooks/useRules.test.tsx",
+    "src/services/api.test.ts",
+    "src/services/crsCommunity.test.ts"
+  ]
+}

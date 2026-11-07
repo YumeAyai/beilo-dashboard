@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Keep the resize hit area, with only a faint, short hint on hover. */
+[data-topology-panel] > [role="separator"] {
+  position: relative;
+}
+
+[data-topology-panel] > [role="separator"]:hover {
+  background-color: transparent;
+}
+
+[data-topology-panel] > [role="separator"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  background-color: currentColor;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+[data-topology-panel] > [role="separator"]:hover::after {
+  opacity: 0.16;
+}

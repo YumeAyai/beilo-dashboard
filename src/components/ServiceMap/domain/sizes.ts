@@ -1,0 +1,32 @@
+export const sizes = {
+  connectorWidth: 4,
+  minArrowLength: 50,
+  arrowHandleWidth: 20,
+  arrowRadius: 5,
+  arrowOverlapGap: 20,
+  aroundCardPadX: 40,
+  aroundCardPadY: 40,
+  linkWidth: 2,
+  feetOuterWidth: 4,
+  feetInnerWidth: 2,
+  feetInnerWidthThick: 6,
+};
+
+export const colors = {
+  arrowStroke: '#ACB1B8',
+  arrowStrokeGreen: '#7ED268',
+  arrowStrokeRed: '#C50000',
+  arrowHandle: '#58626D',
+  startPlateStroke: '#b4b4b4',
+  startPlateFill: '#b4b4b4',
+  connectorFill: '#AEB7C0',
+  connectorStroke: '#58626D',
+  connectorFillGreen: '#7ED268',
+  connectorStrokeGreen: '#7ED268',
+  connectorStrokeRed: '#C50000',
+  connectorFillRed: '#C50000',
+  feetOuterStroke: '#EBEEF0',
+  feetNeutralStroke: '#C1C8D0',
+  feetRedStroke: '#C50000',
+  padlockGreen: '#2F9316',
+};

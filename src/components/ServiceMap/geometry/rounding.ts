@@ -1,0 +1,135 @@
+import type { XY } from './general';
+import { segmentsIntersection } from './intersections';
+import { distance } from './utils';
+import type { Sides, XYWH } from './xywh';
+
+interface SideIntersections {
+  left: XY | null;
+  right: XY | null;
+  top: XY | null;
+  bottom: XY | null;
+}
+
+export const goAroundTheBox = (box: XYWH, from: XY, to: XY, padX: number, padY: number): XY[] => {
+  const sides = box.sides;
+  const pointsBetween: XY[] = [];
+
+  const pivot1 = getAroundPoint(from, to, sides, padX, padY);
+  if (pivot1 == null) {
+    return pointsBetween;
+  } else {
+    pointsBetween.push(pivot1);
+  }
+
+  const secondAroundPoint = getAroundPoint(pivot1, to, sides, padX, padY);
+  if (secondAroundPoint != null) pointsBetween.push(secondAroundPoint);
+
+  return pointsBetween;
+};
+
+const getAroundPoint = (from: XY, to: XY, sides: Sides, padX: number, padY: number): XY | null => {
+  const xsect = {
+    top: segmentsIntersection(from, to, ...sides.top),
+    bottom: segmentsIntersection(from, to, ...sides.bottom),
+    left: segmentsIntersection(from, to, ...sides.left),
+    right: segmentsIntersection(from, to, ...sides.right),
+  };
+
+  const twoIntersections: XY[] = [];
+  if (xsect.top != null) twoIntersections.push(xsect.top);
+  if (xsect.bottom != null) twoIntersections.push(xsect.bottom);
+  if (xsect.left != null) twoIntersections.push(xsect.left);
+  if (xsect.right != null) twoIntersections.push(xsect.right);
+
+  if (twoIntersections.length < 2) {
+    return null;
+  }
+
+  twoIntersections.sort((a, b) => {
+    const aDist = distance(from, a);
+    const bDist = distance(from, b);
+
+    return aDist - bDist;
+  });
+
+  return getAroundPointByCase(sides, twoIntersections, xsect, padX, padY);
+};
+
+const getAroundPointByCase = (
+  sides: Sides,
+  intersections: XY[],
+  xsect: SideIntersections,
+  padX: number,
+  padY: number,
+): XY => {
+  const [first, second] = intersections;
+
+  const verticalCase =
+    (first === xsect.bottom && second === xsect.top) ||
+    (first === xsect.top && second === xsect.bottom);
+
+  const horizontalCase =
+    (first === xsect.left && second === xsect.right) ||
+    (first === xsect.right && second === xsect.left);
+
+  const topLeftCase =
+    (first === xsect.left && second === xsect.top) ||
+    (first === xsect.top && second === xsect.left);
+
+  const topRightCase =
+    (first === xsect.right && second === xsect.top) ||
+    (first === xsect.top && second === xsect.right);
+
+  const bottomRightCase =
+    (first === xsect.bottom && second === xsect.right) ||
+    (first === xsect.right && second === xsect.bottom);
+
+  const bottomLeftCase =
+    (first === xsect.bottom && second === xsect.left) ||
+    (first === xsect.left && second === xsect.bottom);
+
+  let x = 0, y = 0;
+
+  const bottomY = sides.bottom[0].y;
+  const topY = sides.top[0].y;
+  const leftX = sides.left[0].x;
+  const rightX = sides.right[0].x;
+
+  if (verticalCase) {
+    const midX = (leftX + rightX) / 2;
+    const keepLeft = (second.x + first.x) / 2 < midX && second.x < first.x;
+
+    x = keepLeft ? leftX - padX : rightX + padX;
+    y = first === xsect.bottom ? bottomY + padY : topY - padY;
+  }
+
+  if (horizontalCase) {
+    const midY = (bottomY + topY) / 2;
+    const keepTop = (second.y + first.y) / 2 < midY && second.y < first.y;
+
+    y = keepTop ? topY - padY : bottomY + padY;
+    x = first === xsect.left ? leftX - padX : rightX + padX;
+  }
+
+  if (topLeftCase) {
+    x = leftX - padX;
+    y = topY - padY;
+  }
+
+  if (topRightCase) {
+    x = rightX + padX;
+    y = topY - padY;
+  }
+
+  if (bottomRightCase) {
+    x = rightX + padX;
+    y = bottomY + padY;
+  }
+
+  if (bottomLeftCase) {
+    x = leftX - padX;
+    y = bottomY + padY;
+  }
+
+  return { x, y };
+};

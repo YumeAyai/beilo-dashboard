@@ -1,0 +1,31 @@
+// Original Hubble UI assets; host intentionally shares the world logo upstream.
+const root = `${import.meta.env.BASE_URL}hubble/icons/logos/`;
+export const logos: Record<string, string> = {
+  kubernetes: `${root}kubernetes-logo.svg`,
+  world: `${root}world-logo.svg`,
+  mongodb: `${root}mongodb-logo.svg`,
+  redis: `${root}redis-logo.svg`,
+  rabbitmq: `${root}rabbitmq-logo.svg`,
+  elasticsearch: `${root}elasticsearch-logo.svg`,
+  mysql: `${root}mysql-logo.svg`,
+  postgresql: `${root}postgresql-logo.svg`,
+  zookeeper: `${root}zookeeper-logo.png`,
+  grpc: `${root}grpc-logo.svg`,
+  http: `${root}http-logo.svg`,
+  cassandra: `${root}cassandra-logo.svg`,
+  kafka: `${root}kafka-logo.svg`,
+  influxdb: `${root}influxdb-logo.svg`,
+  covalent: `${root}covalent-logo.svg`,
+  couchdb: `${root}couchdb-logo.svg`,
+  graphql: `${root}graphql-logo.svg`,
+  etcd: `${root}etcd-logo.svg`,
+  memcached: `${root}memcached-logo.svg`,
+  aws: `${root}aws-logo.svg`,
+  prometheus: `${root}prometheus-logo.svg`,
+  grafana: `${root}grafana-logo.svg`,
+  loki: `${root}loki-logo.svg`,
+  tempo: `${root}tempo-logo.svg`,
+  mimir: `${root}mimir-logo.svg`,
+  host: `${root}world-logo.svg`,
+};
+export const EMPTY_LOGO = logos.kubernetes;

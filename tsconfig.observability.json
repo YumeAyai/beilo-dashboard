@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.dataplane.json",
+  "include": [
+    "src/pages/Dashboard.tsx",
+    "src/pages/Threat.tsx",
+    "src/components/ObservationNotice.tsx",
+    "src/types/observability.ts",
+    "src/types/observability.test.ts",
+    "src/services/api.ts",
+    "src/types/threat.ts"
+  ]
+}

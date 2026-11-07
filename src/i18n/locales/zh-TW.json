@@ -1,0 +1,882 @@
+{
+  "observability": {
+    "fields": {
+      "unblockedThreats": "未阻擋威脅"
+    }
+  },
+  "common": {
+    "back": "返回",
+    "save": "儲存",
+    "cancel": "取消",
+    "confirm": "確認",
+    "delete": "刪除",
+    "edit": "編輯",
+    "add": "新增",
+    "search": "搜尋",
+    "refresh": "重新整理",
+    "export": "匯出",
+    "import": "匯入",
+    "apply": "套用",
+    "reset": "重設",
+    "close": "關閉",
+    "yes": "是",
+    "no": "否",
+    "loading": "載入中...",
+    "noData": "暫無資料",
+    "success": "成功",
+    "error": "錯誤",
+    "warning": "警告",
+    "info": "資訊",
+    "enabled": "啟用",
+    "disabled": "停用",
+    "active": "活躍",
+    "inactive": "非活躍",
+    "online": "線上",
+    "offline": "離線",
+    "all": "全部",
+    "total": "共",
+    "actions": "操作",
+    "status": "狀態",
+    "time": "時間",
+    "type": "類型",
+    "level": "等級",
+    "name": "名稱",
+    "description": "描述",
+    "category": "分類",
+    "ip": "IP",
+    "url": "URL",
+    "source": "來源",
+    "count": "次數",
+    "day": "天",
+    "hour": "小時",
+    "minute": "分鐘",
+    "justNow": "剛剛",
+    "daysAgo": "{{count}} 天前",
+    "hoursAgo": "{{count}} 小時前",
+    "minutesAgo": "{{count}} 分鐘前"
+  },
+  "status": {
+    "suspicious": "可疑",
+    "detected": "已告警，未阻斷",
+    "logged": "已記錄",
+    "allowed": "已放行",
+    "unknown": "狀態未知",
+    "enabled": "啟用中",
+    "disabled": "已停用",
+    "blocked": "已阻擋",
+    "processing": "處理中",
+    "online": "線上",
+    "offline": "離線",
+    "active": "活躍",
+    "inactive": "非活躍",
+    "success": "成功",
+    "error": "錯誤",
+    "warning": "警告",
+    "banned": "已封鎖",
+    "monitoring": "監控中",
+    "pending": "待審"
+  },
+  "threatLevel": {
+    "critical": "嚴重",
+    "high": "高",
+    "medium": "中",
+    "low": "低",
+    "info": "資訊",
+    "unknown": "未報告"
+  },
+  "attackType": {
+    "ruleAlert": "規則告警",
+    "protocolAttack": "協定異常",
+    "ruleBlock": "規則阻擋",
+    "sqlInjection": "SQL注入",
+    "xss": "XSS攻擊",
+    "commandInjection": "命令注入",
+    "pathTraversal": "路徑遍歷",
+    "fileInclusion": "檔案包含",
+    "bruteForce": "暴力攻擊",
+    "scanner": "掃描器",
+    "maliciousBot": "惡意Bot",
+    "sensitiveData": "敏感資料",
+    "csrf": "CSRF攻擊",
+    "ssrf": "SSRF攻擊",
+    "xmlInjection": "XML注入",
+    "ldapInjection": "LDAP注入",
+    "nosqlInjection": "NoSQL注入",
+    "unknown": "未知威脅",
+    "multipartAttack": "Multipart 異常",
+    "deprecatedHeader": "已棄用的請求標頭",
+    "genericAttack": "通用規則告警",
+    "genericInjection": "通用注入",
+    "phpInjection": "PHP 注入",
+    "javaInjection": "Java 注入",
+    "sessionFixation": "工作階段固定",
+    "dataLeak": "資訊洩漏",
+    "methodEnforcement": "HTTP 方法限制",
+    "sqlDataLeak": "SQL 資訊洩漏",
+    "javaDataLeak": "Java 資訊洩漏",
+    "phpDataLeak": "PHP 資訊洩漏",
+    "iisDataLeak": "IIS 資訊洩漏",
+    "webShell": "WebShell 特徵",
+    "anomaly": "異常分數判定",
+    "correlation": "交易關聯"
+  },
+  "ruleAction": {
+    "block": "阻擋",
+    "allow": "允許",
+    "skip": "跳過",
+    "log": "記錄",
+    "redirect": "重新導向",
+    "drop": "丟棄",
+    "returnStatus": "返回狀態"
+  },
+  "nodeType": {
+    "entry": "入口",
+    "exit": "出口",
+    "internal": "內部",
+    "external": "外部"
+  },
+  "layout": {
+    "title": "北落主控台",
+    "connected": "已連線",
+    "disconnected": "未連線",
+    "nav": {
+      "dashboard": "儀表板",
+      "topology": "服務拓撲",
+      "threat": "威脅監控",
+      "rules": "WAF規則",
+      "logs": "日誌檢視",
+      "block": "IP封鎖",
+      "users": "使用者管理",
+      "settings": "系統設定"
+    },
+    "toolbar": {
+      "refresh": "重新整理",
+      "theme": "切換主題",
+      "notification": "通知",
+      "settings": "設定"
+    },
+    "notification": {
+      "title": "通知中心",
+      "markAllRead": "全部已讀",
+      "clearAll": "清空",
+      "empty": "暫無通知"
+    },
+    "user": {
+      "admin": "Admin",
+      "role": "管理員",
+      "menu": {
+        "settings": "系統設定",
+        "logout": "登出"
+      }
+    }
+  },
+  "dashboard": {
+    "protection": {
+      "title": "防護攔截",
+      "window": "近 24 小時",
+      "waf": "WAF 攔截",
+      "xdp": "XDP 丟棄",
+      "cnp": "網路策略拒絕",
+      "requests": "請求",
+      "packets": "封包",
+      "notCollected": "未採集",
+      "unavailable": "暫不可用",
+      "wafHint": "Coraza 阻斷的 HTTP 請求數。不是規則命中數，也不與封包數相加。",
+      "xdpHint": "Beilo XDP 黑名單和惡意 TCP 旗標規則丟棄的封包數。缺少指標時不視為零。",
+      "cnpHint": "Cilium 網路策略拒絕的封包數，包含 CNP、CCNP 與 Kubernetes 正常隔離拒絕；不等同已確認攻擊，也不是 Beilo 專屬 CNP 計數。排除路由及其他網路故障。",
+      "blockedThreats": "已阻斷威脅",
+      "intercepted": "已攔截",
+      "blockedThreatsHint": "彙總 WAF 與 XDP 安全規則的阻斷動作。每次 HTTP 阻斷或逐包丟棄各記一次，不代表去重後的攻擊數；不包含網路策略拒絕。",
+      "interceptedHint": "彙總 WAF、XDP 與網路策略的所有攔截動作。每次請求阻斷或逐包丟棄各記一次；包含 CNP、CCNP 和 Kubernetes 的正常隔離拒絕，不等同已確認攻擊。排除路由等網路故障。",
+      "partialHint": "目前數字僅彙總已採集來源，未採集或無法取得的來源未計入。",
+      "runtimeBlocked": "入侵阻擋",
+      "wafBlocked": "WAF 阻擋",
+      "runtimeBlockedHint": "執行階段安全策略阻擋的操作次數。",
+      "wafBlockedHint": "WAF 阻擋的 HTTP 請求數。",
+      "blockCountUnavailable": "資料暫不可用。"
+    },
+    "title": "儀表板",
+    "subtitle": "安全防護與執行狀態概覽",
+    "stats": {
+      "topology": "服務拓撲",
+      "totalSites": "Ingress節點",
+      "totalNodes": "Service節點",
+      "ingressNodes": "Ingress 節點",
+      "serviceNodes": "Service 節點",
+      "threatBlock": "威脅防護",
+      "directServices": "獨立 Service",
+      "entryBusinessScale": "入口與業務規模",
+      "entryResources": "入口資源",
+      "businessServices": "防護中 Service",
+      "entryBreakdown": "Ingress {{ingress}} · Gateway {{gateway}} · 獨立 Service {{service}}",
+      "podBreakdown": "就緒 Pod {{ready}} / {{total}}",
+      "inventoryUnavailable": "入口明細暫不可用",
+      "podsUnavailable": "Pod 執行個體暫不可用",
+      "entryScaleHint": "查看 Ingress、Gateway 和對外公開的 Service。",
+      "businessScaleHint": "查看 WAF 入口關聯的 Service 和 Pod。",
+      "entryExposure": "入口暴露面",
+      "ingressEntries": "Ingress 入口",
+      "gatewayEntries": "Gateway 入口",
+      "exposureHint": "查看已發布的 Ingress 和 Gateway 入口。",
+      "threatDetected": "威脅偵測",
+      "totalBlocked": "累計阻擋",
+      "clusterStatus": "叢集狀態",
+      "qps": "QPS",
+      "readyPods": "就緒 Pod",
+      "notReadyPods": "未就緒 Pod",
+      "totalPods": "Pod 總數"
+    },
+    "connection": {
+      "redisEnabled": "Redis已啟用",
+      "redisDisabled": "Redis未啟用",
+      "connected": "已連線",
+      "notConnected": "未連線",
+      "lokiEnabled": "Loki已啟用",
+      "lokiDisabled": "Loki未啟用"
+    },
+    "metrics": {
+      "threatRate": "威脅率",
+      "totalRequests": "總請求"
+    },
+    "charts": {
+      "threatTrend": "威脅趨勢",
+      "attackTypeDistribution": "攻擊類型分布",
+      "attackSourceRanking": "攻擊來源排行",
+      "recentAttacks": "最近攻擊記錄",
+      "requestTrend": "請求趨勢",
+      "ipSourceStats": "IP來源統計",
+      "clusterHealth": "集群健康",
+      "qpsChart": "QPS",
+      "clientSource": "客戶端來源",
+      "responseStatus": "響應狀態",
+      "externalSourceDomains": "外部來源域名",
+      "externalSourcePages": "外部來源頁面",
+      "visitedDomains": "受訪域名",
+      "visitedPages": "受訪頁面",
+      "ipHeatmap": "IP請求熱力圖",
+      "requestAttribution": "流量分析"
+    },
+    "table": {
+      "sourceIp": "來源IP",
+      "region": "地區",
+      "attackCount": "攻擊次數",
+      "threat": "威脅",
+      "time": "時間",
+      "attackIp": "攻擊IP",
+      "attackType": "攻擊類型",
+      "site": "網站",
+      "requests": "請求數",
+      "percentage": "占比"
+    },
+    "chips": {
+      "high": "高",
+      "medium": "中",
+      "low": "低",
+      "top5": "TOP 5"
+    },
+    "clusterStatus": {
+      "healthy": "健康",
+      "degraded": "降級",
+      "down": "故障",
+      "unknown": "未知",
+      "latency": "延遲",
+      "uptime": "運作時間",
+      "apiServer": "API Server",
+      "etcd": "etcd 儲存",
+      "redis": "Redis 快取",
+      "loki": "Loki",
+      "workerNode": "工作節點"
+    }
+  },
+  "rules": {
+    "title": "WAF規則管理",
+    "subtitle": "管理Web應用程式防火牆規則，保護您的應用程式免受攻擊",
+    "stats": {
+      "total": "規則總數",
+      "enabled": "已啟用",
+      "disabled": "已停用",
+      "critical": "嚴重規則"
+    },
+    "table": {
+      "name": "規則名稱",
+      "category": "分類",
+      "level": "等級",
+      "action": "動作",
+      "type": "類型",
+      "status": "狀態",
+      "matchCount": "匹配次數",
+      "lastMatch": "最後匹配",
+      "actions": "操作"
+    },
+    "filter": {
+      "allCategory": "全部分類",
+      "allLevel": "全部等級",
+      "allStatus": "全部狀態",
+      "critical": "嚴重",
+      "high": "高",
+      "medium": "中",
+      "low": "低",
+      "enabled": "啟用",
+      "disabled": "停用"
+    },
+    "buttons": {
+      "apply": "套用",
+      "template": "範本",
+      "export": "匯出",
+      "newRule": "新建規則"
+    },
+    "searchPlaceholder": "搜索規則名稱、描述...",
+    "toolbar": {
+      "refresh": "刷新",
+      "edit": "編輯",
+      "test": "測試",
+      "delete": "刪除"
+    },
+    "batch": {
+      "selected": "已選擇 <strong>{{count}}</strong> 條規則",
+      "enable": "啟用",
+      "disable": "禁用"
+    },
+    "pagination": {
+      "rowsPerPage": "每頁行數",
+      "displayRows": "{{from}}-{{to}} / 共 {{count}}"
+    },
+    "template": {
+      "title": "規則模板",
+      "subtitle": "選擇預定義的規則模板快速創建規則",
+      "close": "關閉"
+    },
+    "export": {
+      "inProgress": "導出功能開發中"
+    },
+    "test": {
+      "title": "規則測試",
+      "subtitle": "測試規則對請求的匹配效果",
+      "method": "方法",
+      "path": "路徑",
+      "headers": "請求頭 (JSON)",
+      "body": "請求體",
+      "startTest": "開始測試",
+      "testing": "測試中...",
+      "result": {
+        "title": "測試結果",
+        "matchedResult": "匹配結果",
+        "matched": "匹配",
+        "notMatched": "未匹配",
+        "action": "執行動作",
+        "processingTime": "處理時間",
+        "matchedRules": "匹配的規則"
+      }
+    },
+    "ruleType": {
+      "regex": "正則表達式",
+      "stringMatch": "字符串匹配",
+      "variableCompare": "變量比較",
+      "conditionGroup": "條件組合"
+    },
+    "phase": {
+      "early": "早期處理",
+      "request": "請求階段",
+      "response": "響應階段"
+    },
+    "action": {
+      "block": "阻斷",
+      "allow": "允許",
+      "pass": "跳過",
+      "log": "記錄",
+      "redirect": "重定向",
+      "drop": "丟棄",
+      "status": "返回狀態"
+    },
+    "editor": {
+      "editTitle": "編輯規則",
+      "createTitle": "新建規則",
+      "name": "規則名稱",
+      "description": "描述",
+      "ruleType": "規則類型",
+      "regex": "正規表達式",
+      "stringMatch": "字串匹配",
+      "variableCompare": "變數比較",
+      "conditionGroup": "條件組合",
+      "phase": "處理階段",
+      "earlyPhase": "早期處理",
+      "requestPhase": "請求階段",
+      "responsePhase": "回應階段",
+      "threatLevel": "威脅等級",
+      "conditions": "匹配條件",
+      "addCondition": "新增條件",
+      "noConditions": "暫無匹配條件"
+    },
+    "condition": {
+      "placeholder": "匹配值",
+      "addFirst": "添加第一個條件",
+      "variable": "條件變數",
+      "requestPath": "請求路徑",
+      "requestBody": "請求主體",
+      "requestHeader": "請求標頭",
+      "queryParam": "查詢參數",
+      "allParams": "所有參數",
+      "clientIp": "客戶端IP",
+      "userAgent": "User-Agent",
+      "cookie": "Cookie",
+      "operator": "條件運算",
+      "match": "匹配",
+      "contains": "包含",
+      "equals": "等於",
+      "startsWith": "開頭是",
+      "endsWith": "結尾是",
+      "regex": "正規表達式"
+    },
+    "messages": {
+      "noRules": "暫無規則",
+      "enabledCount": "已啟用 {{count}} 條規則",
+      "enableFailed": "啟用失敗",
+      "disabledCount": "已停用 {{count}} 條規則",
+      "disableFailed": "停用失敗",
+      "confirmDelete": "確定要刪除此規則嗎？",
+      "deleteFailed": "刪除失敗",
+      "deleted": "規則已刪除",
+      "ruleUpdated": "規則已更新",
+      "ruleCreated": "規則已創建",
+      "saveFailed": "保存失敗",
+      "templateApplied": "模板已應用",
+      "applyTemplateFailed": "應用模板失敗",
+      "nameRequired": "規則名稱不能為空",
+      "conditionRequired": "至少需要新增一個匹配條件"
+    },
+    "category": {
+      "placeholder": "如: SQL注入, XSS, 命令注入等",
+      "sqlInjection": "SQL注入",
+      "xss": "XSS",
+      "commandInjection": "命令注入",
+      "pathTraversal": "路徑遍歷",
+      "scanner": "掃描器",
+      "infoLeak": "資訊洩漏"
+    }
+  },
+  "threat": {
+    "title": "威脅監控",
+    "subtitle": "即時監控和分析安全威脅",
+    "autoRefresh": "自動刷新",
+    "timeRange": {
+      "15min": "最近15分鐘",
+      "1hour": "最近1小時",
+      "6hours": "最近6小時",
+      "24hours": "最近24小時",
+      "7days": "最近7天"
+    },
+    "stats": {
+      "totalRequests": "總請求數",
+      "threatDetected": "威脅偵測",
+      "unblockedHint": "依交易去重的 Coraza 規則告警樣本，排除明確攔截；≥ 表示樣本下限。",
+      "blocked": "已攔截",
+      "blockedIp": "被封IP"
+    },
+    "charts": {
+      "threatTrend": "威脅趨勢",
+      "threatTypeDistribution": "威脅類型分布",
+      "threatLevelDistribution": "威脅等級分布",
+      "attackSourceRanking": "攻擊來源排行",
+      "recentThreats": "最近威脅事件"
+    },
+    "table": {
+      "ip": "IP位址",
+      "threatCount": "威脅數",
+      "requests": "請求數",
+      "blockedCount": "攔截數",
+      "status": "狀態",
+      "time": "時間",
+      "sourceIp": "來源IP",
+      "threatType": "威脅類型",
+      "targetUrl": "目標URL",
+      "level": "等級"
+    },
+    "chartNames": {
+      "threatCount": "威脅數",
+      "blockedCount": "攔截數"
+    },
+    "fetchFailed": "取得威脅資料失敗"
+  },
+  "topology": {
+    "zoomOut": "縮小",
+    "zoomIn": "放大",
+    "fitView": "適應畫布",
+    "title": "服務拓撲",
+    "subtitle": "查看和管理服務之間的連接關係",
+    "allNamespaces": "全部命名空間",
+    "httpStatus": "HTTP 狀態",
+    "filterPlaceholder": "篩選：app=web、ip=1.1.1.1、pod=frontend",
+    "filters": {
+      "label": "資料流篩選",
+      "namespace": "命名空間",
+      "clear": "清除篩選",
+      "open": "展開候選",
+      "findNamespace": "搜尋命名空間…",
+      "noNamespaces": "沒有符合的命名空間",
+      "noSuggestions": "暫無候選，可輸入篩選條件"
+    },
+    "verdict": {
+      "any": "任意結果",
+      "forwarded": "已轉發",
+      "dropped": "已丟棄",
+      "denied": "已拒絕",
+      "audit": "審計"
+    },
+    "flowsPerSecond": "{{count}} 流/秒",
+    "nodesConnected": "{{connected}}/{{total}} 節點已連接",
+    "namespaceResources": "命名空間資源",
+    "allNamespacesText": "全部命名空間",
+    "flows": "數據流",
+    "loadingFlows": "正在載入資料流…",
+    "flowsCount": "({{count}})",
+    "columns": "列",
+    "toggleColumns": "切換列顯示",
+    "noFlows": "暫無數據流",
+    "noPods": "暫無 Pod 實例",
+    "failedToFetch": "獲取拓撲數據失敗",
+    "overview": "概覽",
+    "pods": "Pod 實例",
+    "nodeType": "節點類型",
+    "port": "端口",
+    "requestRate": "請求速率",
+    "errorRate": "錯誤率",
+    "latency": "延遲",
+    "cpuUsage": "CPU 使用率",
+    "memoryUsage": "記憶體使用率",
+    "tableColumns": {
+      "sourcePod": "源 Pod",
+      "sourceIP": "源 IP",
+      "sourceIdentity": "源身份",
+      "sourceService": "源服務",
+      "destinationPod": "目標 Pod",
+      "destinationIP": "目標 IP",
+      "destinationIdentity": "目標身份",
+      "destinationService": "目標服務",
+      "destinationPort": "目標端口",
+      "l7info": "L7 資訊",
+      "trafficDirection": "流量方向",
+      "verdict": "結果",
+      "authentication": "認證",
+      "tcpFlags": "TCP 標誌",
+      "timestamp": "時間戳"
+    }
+  },
+  "block": {
+    "title": "IP封鎖管理",
+    "subtitle": "管理被封鎖的IP地址，防止惡意訪問",
+    "search": "搜尋IP",
+    "buttons": {
+      "manualBlock": "手動封鎖",
+      "refresh": "重新整理"
+    },
+    "table": {
+      "ip": "IP位址",
+      "type": "類型",
+      "reason": "原因",
+      "blockTime": "封鎖時間",
+      "expireTime": "過期時間",
+      "source": "來源",
+      "actions": "操作"
+    },
+    "status": {
+      "blockedList": "已封鎖IP列表",
+      "total": "共 {{count}} 個"
+    },
+    "empty": {
+      "noMatch": "未找到符合的IP",
+      "noRecords": "暫無封鎖記錄"
+    },
+    "dialog": {
+      "title": "手動封鎖IP",
+      "ip": "IP位址",
+      "ipPlaceholder": "例如: 1.2.3.4",
+      "reason": "封鎖原因",
+      "reasonPlaceholder": "選填，說明封鎖原因"
+    },
+    "messages": {
+      "fetchFailed": "取得封鎖列表失敗",
+      "ipRequired": "請輸入IP位址",
+      "ipInvalid": "請輸入有效的IP位址",
+      "blockFailed": "封鎖失敗",
+      "unblockFailed": "解除封鎖失敗",
+      "blockedSuccess": "IP {{ip}} 已成功封鎖",
+      "unblockedSuccess": "IP {{ip}} 已解除封鎖"
+    }
+  },
+  "logs": {
+    "title": "日誌檢視器",
+    "subtitle": "查看和分析系統日誌，快速定位問題",
+    "filter": {
+      "timeRange": "時間範圍",
+      "level": "日誌級別",
+      "all": "全部",
+      "quantity": "數量"
+    },
+    "table": {
+      "time": "時間",
+      "level": "級別",
+      "message": "訊息內容",
+      "source": "來源"
+    },
+    "empty": "暫無日誌資料",
+    "error": "取得日誌失敗",
+    "buttons": {
+      "query": "查詢",
+      "refresh": "重新整理",
+      "export": "匯出"
+    }
+  },
+  "users": {
+    "title": "使用者管理",
+    "subtitle": "管理系統用戶和權限",
+    "buttons": {
+      "addUser": "新增使用者"
+    },
+    "table": {
+      "user": "使用者",
+      "email": "信箱",
+      "role": "角色",
+      "status": "狀態",
+      "joinTime": "加入時間",
+      "actions": "操作"
+    },
+    "roles": {
+      "admin": "管理員",
+      "editor": "編輯",
+      "user": "使用者"
+    },
+    "presetUsers": {
+      "zhangSan": "張三",
+      "liSi": "李四",
+      "wangWu": "王五",
+      "zhaoLiu": "趙六",
+      "qianQi": "錢七",
+      "sunBa": "孫八",
+      "zhouJiu": "周九"
+    },
+    "dialog": {
+      "editTitle": "編輯使用者",
+      "addTitle": "新增使用者",
+      "name": "姓名",
+      "email": "信箱",
+      "role": "角色",
+      "status": "狀態",
+      "username": "使用者名稱",
+      "newPassword": "新密碼",
+      "password": "密碼",
+      "roles": "角色"
+    },
+    "validation": {
+      "usernameRequired": "使用者名稱不能為空",
+      "emailRequired": "信箱不能為空",
+      "passwordRequired": "密碼不能為空",
+      "invalidEmail": "請輸入有效的信箱地址",
+      "saveFailed": "儲存失敗，請重試"
+    }
+  },
+  "settings": {
+    "title": "系統設定",
+    "subtitle": "配置系統參數和安全設定",
+    "tabs": {
+      "general": "一般",
+      "notification": "通知",
+      "security": "安全性",
+      "channels": "通知管道"
+    },
+    "general": {
+      "siteName": "網站名稱",
+      "siteUrl": "網站URL",
+      "contactEmail": "聯絡信箱",
+      "timezone": "時區",
+      "language": "語言",
+      "locale": "區域",
+      "siteInfo": "網站"
+    },
+    "notification": {
+      "emailNotification": "郵件通知",
+      "enableEmail": "啟用郵件通知",
+      "enablePush": "啟用推播通知",
+      "securityReminder": "安全提醒",
+      "securityDescription": "接收安全事件通知",
+      "systemUpdate": "系統更新",
+      "weeklyReport": "每週報告",
+      "pushDescription": "接收推播通知",
+      "systemDescription": "系統更新通知",
+      "reportDescription": "每週摘要報告"
+    },
+    "security": {
+      "accountInfo": "帳戶資訊",
+      "userEmail": "使用者信箱",
+      "userId": "使用者ID",
+      "superAdmin": "超級管理員",
+      "changePassword": "修改密碼",
+      "currentPassword": "目前密碼",
+      "newPassword": "新密碼",
+      "confirmPassword": "確認新密碼",
+      "confirmNewPassword": "確認新密碼",
+      "passwordError": "密碼驗證錯誤",
+      "currentPasswordRequired": "請輸入目前密碼",
+      "newPasswordRequired": "請輸入新密碼",
+      "passwordMismatch": "兩次輸入的新密碼不一致",
+      "passwordTooShort": "密碼長度至少為6個字符",
+      "enable2FA": "啟用兩步驟驗證",
+      "twoFactorAuth": "兩步驟驗證",
+      "totpEnabled": "已啟用兩步驟驗證",
+      "totpDisabled": "已停用兩步驟驗證",
+      "totpSetupTitle": "設定兩步驟驗證",
+      "totpSetupStep1": "下載身份驗證應用（如 Google Authenticator）",
+      "totpSetupStep2": "掃描二維碼或手動輸入密鑰",
+      "totpSetupScanHelp": "使用身份驗證應用掃描二維碼",
+      "totpSetupManualHelp": "如果無法掃描，請手動輸入此密鑰：",
+      "totpSetupManualKey": "手動密鑰",
+      "totpSetupEnterCode": "輸入應用中的6位代碼",
+      "totpSetupVerificationCode": "驗證碼",
+      "totpSetupEnable": "啟用2FA",
+      "totpSetupSuccessTitle": "2FA 啟用成功",
+      "totpSetupSuccessMessage": "您的帳戶現在更安全了",
+      "loginNotification": "登入通知",
+      "loginNotifDesc": "新登入活動通知",
+      "securityOptions": "安全性選項",
+      "role": "角色",
+      "registered": "註冊時間",
+      "lastLogin": "最後登入"
+    },
+    "buttons": {
+      "save": "儲存設定",
+      "confirmPassword": "確認修改密碼",
+      "enable2FA": "啟用2FA",
+      "disable2FA": "停用2FA"
+    },
+    "channels": {
+      "title": "通知管道",
+      "subtitle": "管理通知管道和規則",
+      "addChannel": "新增管道",
+      "editChannel": "編輯管道",
+      "name": "名稱",
+      "type": "類型",
+      "status": "狀態",
+      "isDefault": "預設",
+      "default": "預設",
+      "noChannels": "暫無通知管道",
+      "setAsDefault": "設為預設",
+      "active": "啟用"
+    },
+    "totp": {
+      "disable": "停用2FA",
+      "disableMessage": "請輸入驗證應用程式中的 6 位驗證碼以停用兩步驟驗證。",
+      "verificationCode": "驗證碼"
+    }
+  },
+  "login": {
+    "title": "北落主控台",
+    "subtitle": "登入到您的帳戶",
+    "fields": {
+      "username": "使用者名稱",
+      "password": "密碼",
+      "totpCode": "驗證碼"
+    },
+    "buttons": {
+      "login": "登入"
+    },
+    "errors": {
+      "required": "使用者名稱和密碼不能為空",
+      "failed": "登入失敗，請重試",
+      "invalid": "使用者名稱或密碼錯誤",
+      "totpRequired": "請輸入驗證碼",
+      "totpInvalid": "驗證碼錯誤"
+    },
+    "totpRequired": "需要兩步驟驗證，請輸入認證應用中的驗證碼。",
+    "footer": {
+      "defaultHint": "雲原生安全與可觀測性 · 北落"
+    }
+  },
+  "requestAttribution": {
+    "addressTypes": {
+      "private": "私有位址",
+      "loopback": "本機回環",
+      "link_local": "鏈路本機",
+      "shared": "共用位址",
+      "multicast": "群播位址",
+      "unspecified": "未指定位址",
+      "reserved": "保留位址",
+      "invalid": "無效位址"
+    },
+    "unknownLocation": "未知地區",
+    "unnamedRegion": "未命名地圖區域",
+    "noObservedTraffic": "暫無已定位的存取記錄",
+    "title": "流量概覽",
+    "totalRequests": "總請求數",
+    "totalThreats": "總威脅數",
+    "threatRate": "威脅率",
+    "sourceCountries": "來源國家",
+    "country": "國家",
+    "requests": "請求",
+    "threatPercent": "威脅%",
+    "rank": "#",
+    "highThreat": "高威脅",
+    "elevated": "中威脅",
+    "normal": "正常"
+  },
+  "emailTemplates": {
+    "title": "郵件範本",
+    "description": "編輯通知郵件的版式與文案，儲存後可於郵件管道選用。",
+    "choose": "選擇範本",
+    "name": "範本名稱",
+    "subject": "郵件主旨",
+    "visual": "視覺化",
+    "source": "HTML 原始碼",
+    "text": "純文字備份",
+    "preview": "郵件預覽",
+    "previewWidth": "預覽尺寸",
+    "previewHint": "使用示範資料，不會寄送郵件。",
+    "desktop": "桌面",
+    "mobile": "手機",
+    "export": "匯出",
+    "save": "儲存範本",
+    "saving": "儲存中…",
+    "saved": "範本已儲存，可於郵件管道選用。",
+    "unsaved": "有未儲存變更",
+    "stored": "已儲存",
+    "preset": "預設範本 · 未儲存",
+    "restore": "還原目前範本",
+    "reload": "重新載入",
+    "unavailable": "目前郵件範本服務無法使用。仍可編輯、預覽及匯出。",
+    "selectorUnavailable": "暫時無法載入範本，可於「郵件範本」頁查看及儲存。",
+    "conflict": "範本已被其他人修改。草稿已保留，請重新載入並比對已儲存版本。",
+    "forbidden": "沒有存取或儲存郵件範本的權限。",
+    "failed": "郵件範本操作失敗。",
+    "invalid": "範本無法預覽",
+    "regenerate": "修改視覺化欄位會重新產生 HTML，取代目前原始碼變更。",
+    "variables": "可用事件欄位：Title、Summary、OccurredAt、Fields。",
+    "sourceHint": "支援欄位引用與 if、with、range，不支援函式呼叫。",
+    "channelTemplate": "郵件範本",
+    "channelHint": "此管道的通知郵件使用所選範本；範本須先儲存。",
+    "plainText": "純文字郵件",
+    "sampleTitle": "郵件範本預覽",
+    "sampleMessage": "這是一封示範通知，用於檢查範本的版式與文案。",
+    "fields": {
+      "heading": "標題格式",
+      "summary": "內文格式",
+      "category": "場景標籤",
+      "badge": "狀態標籤",
+      "color": "強調色",
+      "tint": "淺背景",
+      "border": "邊框色",
+      "environment": "環境名稱",
+      "actionLabel": "按鈕文字",
+      "actionURL": "按鈕連結（選填）",
+      "reason": "收件說明",
+      "footerNote": "補充說明",
+      "footerVerse": "頁尾原句",
+      "footerTagline": "品牌說明"
+    },
+    "scenes": {
+      "security-alert": "安全告警",
+      "policy-change": "策略變更",
+      "system-warning": "系統異常",
+      "recovery": "恢復通知",
+      "daily-digest": "每日摘要",
+      "channel-test": "管道測試"
+    }
+  }
+}
